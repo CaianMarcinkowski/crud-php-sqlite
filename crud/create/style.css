@@ -1,53 +1,130 @@
 body {
-    background-color: #ddd9ce;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-    margin: 5;
+  background-color: #ddd9ce;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 5;
 }
 
-h1, label, from , a{ 
-    margin: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    color: black;
+h1,
+label,
+form,
+a {
+  margin: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: black;
+  margin-left: 5px;
 }
 
 input {
-    border-radius: 5px;
-    margin: 5px;
-    padding: 15px;
-    border: none;
-    outline: none;
-    font-size: 15px;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 15px;
 }
 
 .btn {
-    border-radius: 5px;
-    padding: 15px;
-    border: none;
-    outline: none;
-    font-size: 15px;
-    margin: 10px auto; /* Centralizar horizontalmente apenas os botões */
-    background-color: #00000036;
+  border-radius: 5px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  margin: 10px auto;
+  background-color: #00000036;
 }
-
 
 .btn:hover {
-    background-color: #333;
-    box-shadow: 10px 5px 5px black;
-    color: #fff;
-    cursor: pointer;
+  background-color: #333;
+  box-shadow: 10px 5px 5px black;
+  color: #fff;
+  cursor: pointer;
 }
 
-.btn-group{
-    display: flex;
-    align-items: center;
-    text-align: center;
+.btn-group {
+  display: flex;
+  align-items: center;
 }
 
-a{
+.option-colors {
+  border-radius: 5px;
+  margin: 5px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  margin: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: black;
+}
 
+.input-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Alinha os elementos à direita */
+  margin-bottom: 10px;
+}
+
+.input-row label {
+  flex: 1;
+  text-align: left;
+  margin-right: 10px;
+}
+
+.input-row input,
+.input-row select,
+.input-row .btn-add {
+  flex: 2;
+  margin: 10;
+}
+
+.btn-add{
+  width: 8px;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  text-align: center;
+}
+
+.styled-table th {
+  background-color: #333;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.styled-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.styled-table tr:nth-child(odd) {
+  background-color: #00000036;
+}
+
+.remove-button{
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  margin: 1px auto;
+  background-color: #00000036;
+}
+
+.remove-button:hover {
+  background-color: #333;
+  box-shadow: 10px 5px 5px black;
+  color: #fff;
+  cursor: pointer;
 }

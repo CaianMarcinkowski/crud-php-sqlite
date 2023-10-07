@@ -22,4 +22,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Erro ao atualizar o registro.";
     }
 }
-?>
