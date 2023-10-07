@@ -7,14 +7,13 @@ $connection = new Connection();
 $users = $connection->query("SELECT * FROM users");
 
 echo "<table border='1'>
-
-    <tr>
-        <th>ID</th>    
-        <th>Nome</th>    
-        <th>Email</th>
-        <th>Ação</th>    
-    </tr>
-";
+        <tr>
+            <th>ID</th>    
+            <th>Nome</th>    
+            <th>Email</th>
+            <th>Ação</th>    
+        </tr>
+    ";
 
 foreach($users as $user) {
 
@@ -35,6 +34,6 @@ echo "</table>";
 
 echo '
     <form action="crud/create/create.php" method="post">
-        <input type="submit" value="Cadastrar Novo Registro">
+        <input style="margin: 5px;" type="submit" value="Cadastrar Novo Registro">
     </form>
 ';

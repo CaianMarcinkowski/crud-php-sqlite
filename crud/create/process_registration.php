@@ -2,7 +2,7 @@
 require '../../connection.php';
 
 // Teste para ver os dados do $_POST
-//print_r($_POST);
+// print_r($_POST);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $connection = new Connection();
@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = $connection->execute($query, $params);
 
     if ($result) {
-        header('Location: ../../index.php'); // Redireciona de volta para a lista de usuários
+        header('Location: ../../index.php');
     } else {
         echo "Erro ao cadastrar o novo registro.";
     }

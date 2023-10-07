@@ -11,7 +11,7 @@ if (isset($_GET['id'])) {
     $result = $connection->execute($query, $params);
 
     if ($result) {
-        header('Location: ../../index.php'); // Redireciona de volta para a lista de usuários
+        header('Location: ../../index.php');
     } else {
         echo "Erro ao excluir o registro.";
     }

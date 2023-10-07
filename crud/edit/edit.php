@@ -6,14 +6,11 @@ try {
         $connection = new Connection();
         $userId = $_GET['id'];
 
-        // Recupere os dados do usuário com base no ID
         $query = "SELECT * FROM users WHERE id = " . intval($userId);
-        //$params = array(':id' => $userId);
 
         $user = $connection->query($query)->fetch(PDO::FETCH_ASSOC);
 
         if ($user) {
-            // Apresente um formulário pré-preenchido com os dados do usuário
             echo "<form action='process_edit.php' method='post'>";
             echo "<input type='hidden' name='id' value='{$user['id']}'>";
             echo "Name: <input type='text' name='name' value='{$user['name']}' required><br>";
