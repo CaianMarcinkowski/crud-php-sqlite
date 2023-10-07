@@ -1,5 +1,5 @@
 <?php
-require 'connection.php';
+require '../../connection.php';
 
 if (isset($_GET['id'])) {
     $connection = new Connection();
@@ -11,7 +11,7 @@ if (isset($_GET['id'])) {
     $result = $connection->execute($query, $params);
 
     if ($result) {
-        echo "Registro excluído com sucesso.";
+        header('Location: ../../index.php'); // Redireciona de volta para a lista de usuários
     } else {
         echo "Erro ao excluir o registro.";
     }

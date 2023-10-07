@@ -1,4 +1,4 @@
-<form action="processar_cadastro.php" method="post">
+<form action="process_registration.php" method="post">
     <label for="name">Nome:</label>
     <input type="text" id="name" name="name" required>
     <br>

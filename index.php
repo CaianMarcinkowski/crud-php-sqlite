@@ -23,18 +23,18 @@ foreach($users as $user) {
                       <td>%s</td>
                       <td>%s</td>
                       <td>
-                           <a href='#'>Editar</a>
-                           <a href='excluir.php?id=%s'>Excluir</a>
+                        <a href='crud/edit/edit.php?id=%s'>Editar</a>
+                        <a href='crud/delete/delete.php?id=%s'>Excluir</a>
                       </td>
-                   </tr>",
-            $user->id, $user->name, $user->email, $user->id);
+                </tr>",
+    $user->id, $user->name, $user->email, $user->id, $user->id);
 
 }
 
 echo "</table>";
 
 echo '
-    <form action="cadastrar.php" method="post">
+    <form action="crud/create/create.php" method="post">
         <input type="submit" value="Cadastrar Novo Registro">
     </form>
 ';
