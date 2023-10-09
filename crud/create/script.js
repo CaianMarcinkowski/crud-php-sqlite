@@ -25,8 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     addedColors.set(selectedColorId, selectedColorName);
     updateSelectedColorsInput();
-
-    colorSelect.value = "";
   });
 
   colorTable.addEventListener("click", function (event) {
