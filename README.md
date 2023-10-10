@@ -1,38 +1,62 @@
-# Teste de conhecimentos PHP + Banco de dados
-##### Objetivo
-Criar um Crud simples, totalmente desenvolvido em PHP, sem a utilização de frameworks, onde será possível Criar/Editar/Excluir/Listar usuários. O sistema também deve possuir a possibilidade de vincular/desvincular várias cores ao usuário.
+# Projeto PHP com SQLite - CRUD de Usuários e Cores
 
-##### Estrutura de banco de dados
-A seguinte estrutura será utilizada para persistência dos dados, podendo ser alterada a qualquer momento para melhor funcionamento do sistema:
+Este é um projeto PHP que utiliza um banco de dados SQLite para criar, ler, atualizar e excluir registros de usuários, além de permitir que os usuários sejam associados ou desassociados de cores.
 
-```sql
-    tabela: users
-        id      int not null auto_increment primary key
-        name    varchar(100) not null
-        email   varchar(100) not null
-```
-```sql
-    tabela: colors
-        id      int not null auto_increment primary key
-        name    varchar(50) not null
-```
-```sql
-    tabela: user_colors
-        color_id  int
-        user_id   int
-```
+## Pré-requisitos
 
-##### Start
-Este projeto conta com uma base sqlite com alguns registros já inseridos. Para início das atividades, use como base o arquivo `index.php`, este é apenas um arquivo exemplo onde é aberta conexão com o banco de dados e lista os usuários em uma tabela.
+Para executar este projeto, você precisará:
 
-##### Pontos que serão levados em conta
-- Funcionalidade
-- Organização do código e projeto
-- Apresentação da interface (Poderá usar frameworks CSS como Bootstrap, Material, Foundation etc)
+- PHP instalado em seu sistema.
+- Extensão SQLite do PHP ativada.
+- Um terminal para executar comandos.
 
-##### Dicas
-- Para utilizar o banco de dados contido na pasta `database/db.sqlite` é necessário que a sua instalação do php tenha a extensão do sqlite instalada e ativada
-- O Php possui um servidor embutido, você consegue dar start ao projeto abrindo o terminal de comando na pasta baixada e executando `php -S 0.0.0.0:7070` e em seguida abrir o navegador em `http://localhost:7070`
+## Instruções de Uso
 
-##### Boa Sorte
-Use seu conhecimento, consulte a documentação e o google, caso ainda houver dúvidas, nos pergunte :D. Boa sorte!
+1. Clone este repositório para sua máquina local.
+
+2. No diretório raiz do projeto, execute o seguinte comando para iniciar o servidor PHP embutido:
+
+   ```
+   php -S 0.0.0.0:7070
+    ```
+Isso iniciará o servidor em http://localhost:7070. Você pode acessar o projeto no seu navegador.
+
+O banco de dados SQLite já está incluído no projeto como db.sqlite. Para manusear o banco de dados, você pode usar o comando sqlite3 no terminal. Por exemplo, para abrir o banco de dados:
+
+    sqlite3 db.sqlite
+    
+Isso abrirá um prompt SQLite onde você pode executar comandos SQL.
+
+O projeto inclui uma página principal que lista os usuários e permite editar ou excluir cada usuário.
+
+Você pode criar, editar e excluir usuários usando as opções fornecidas.
+
+Para associar ou desassociar cores a um usuário, use a tabela em 'editar' e o JavaScript cuidará do restante.
+
+Estrutura do Banco de Dados
+
+O banco de dados contém as seguintes tabelas:
+
+### Tabela: users
+
+    id: Inteiro, chave primária, auto-incremento.
+    name: String (100 caracteres), não pode ser nulo.
+    email: String (100 caracteres), não pode ser nulo.
+
+### Tabela: colors
+
+    id: Inteiro, chave primária, auto-incremento.
+    name: String (50 caracteres), não pode ser nulo.
+
+### Tabela: user_colors
+
+    color_id: Inteiro.
+    user_id: Inteiro.
+
+## Dicas
+
+O PHP possui um servidor embutido que é uma maneira rápida de executar projetos locais sem configurar um servidor web completo.
+
+Para manusear o banco de dados SQLite, você pode usar a ferramenta sqlite3 no terminal, conforme mencionado acima.
+
+O projeto utiliza JavaScript para manipular a tabela de listagem de cores, permitindo a associação e desassociação de cores aos registros de usuários.
