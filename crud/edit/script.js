@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   addButton.addEventListener("click", function () {
     const selectedColorId = colorSelect.value;
-    const selectedColorName =
-      colorSelect.options[colorSelect.selectedIndex].text;
 
     const colorIdsInTable = Array.from(
       colorTable.querySelectorAll("tr[data-color-id]")
@@ -16,16 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (colorIdsInTable.includes(selectedColorId)) {
       alert("Essa cor já está na tabela.");
       return;
-    } else {
-      const newRow = document.createElement("tr");
-      newRow.dataset.colorId = selectedColorId;
-      newRow.innerHTML = `
-        <td>${selectedColorName}</td>
-        <td><button>Remover</button></td>
-      `;
-      colorTable.appendChild(newRow);
-
-      updateSelectedColorsInput();
     }
   });
 
